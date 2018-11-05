@@ -19,11 +19,11 @@ class Users {
         if (user) {
             this.users = this.users.filter((user)=> user.id !== id);
         }
-        return user[0];
+        return user;
     }
     getUser(id) {
         var users = this.users.filter((user)=> user.id === id);
-        return users;
+        return users[0];
     }
     getUserList (room) {
         var users = this.users.filter((user)=> user.room === room);
